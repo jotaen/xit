@@ -122,6 +122,8 @@ followed by one or more characters for the *name* of the *tag*.
 There MAY follow an equals sign (`=`)
 along with one or more characters for the *value* of the *tag*.
 
+*Tag names* MUST be treated as case-insensitive.
+
 The *tag value* MAY be surrounded by a pair of matching quote characters (either `"`, or `'`).
 
 *Tag names* and unquoted *tag values* MUST only contain
