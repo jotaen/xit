@@ -56,6 +56,15 @@ and MUST be either of:
 - `@` (at) for *ongoing*
 - `~` (tilde) for *obsolete*
 
+> #### Example
+>
+> ```
+> [ ] This is an open item
+> [x] This is a checked item
+> [@] This is an ongoing item
+> [~] This is an obsolete item
+> ```
+
 ### Priority
 
 The *priority* indicates how important the *item* is.
@@ -67,6 +76,16 @@ but not in between them.
 The number of exclamation marks MUST be interpreted as equivalent to the level of importance.
 
 The dots are only for visual padding and MUST NOT be attributed any meaning to.
+
+> #### Example
+>
+> ```
+> [ ] ! This is important
+> [ ] !! This is more important
+> 
+> [ ] ..! This is important
+> [ ] !!. This is more important
+> ```
 
 ### Description
 
@@ -84,6 +103,14 @@ These tokens MUST be surrounded by whitespace or punctuation,
 except for such punctuation which the tokens themselves can consist of.
 
 Potential additional *due dates* MUST be disregarded.
+
+> #### Example
+>
+> ```
+> [ ] This description is one line
+> [ ] This description continues ...
+>     ... on the next line
+> ```
 
 ### Due Date
 
@@ -113,6 +140,14 @@ to the last calendar day within the respective time frame.
 
 The *due date* value MUST be representable by the gregorian calendar.
 
+> #### Example
+>
+> ```
+> [ ] This shall be done until -> 2022-03-31
+> [ ] -> 2022-03 Do this throughout March
+> [ ] Do this -> 2022-Q2 within the second quarter
+> ```
+
 ### Tag
 
 *Tags* are annotations for categorising or filtering the data.
@@ -136,14 +171,40 @@ or a newline.
 If there is no closing quote on the same line,
 the *tag value* MUST be treated as absent.
 
+> #### Example
+>
+> ```
+> [ ] This item has a #tag
+> [ ] This #item has #multiple #tags!
+> [ ] Tags can #have=values
+> [ ] Values #can="be quoted"
+> ```
+
 ### Group
 
 A *group* is any consecutive number of *items*
 (without blank line in between),
-that MAY be preceded by one *headline*.
+that MAY be preceded by one *title*.
 
-### Headline
+> #### Example
+>
+> ```
+> [ ] This item and the next one ...
+> [ ] ... are grouped
+> 
+> [ ] This item is its own group
+> ```
 
-The *headline* is a single line of text
+### Title
+
+The *title* is a single line of text
 that MUST NOT start with a whitespace character
 or the opening square bracket character `[`.
+
+> #### Example
+> 
+> ```
+> My TODO list
+> [ ] Item 1
+> [ ] Item 2
+> ```
