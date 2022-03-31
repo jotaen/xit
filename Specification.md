@@ -12,7 +12,7 @@ Per [Creative Commons CC0 1.0 Universal](http://creativecommons.org/publicdomain
 
 ## Preface
 
-The keywords “MUST”, “MUST NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “NOT RECOMMENDED” and “MAY”
+The keywords “MUST”, “MUST NOT”, “SHOULD”, “SHOULD NOT”, and “MAY”
 in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## File Format
@@ -22,7 +22,7 @@ The file extension SHOULD be `.xit`.
 The file encoding MUST be UTF-8.
 
 Newlines MUST be encoded with either `\n` or `\r\n`.
-The newline style SHOULD not be mixed within the same file.
+The newline style SHOULD be consistent within a file.
 
 There SHOULD be a newline at the end of the file.
 
