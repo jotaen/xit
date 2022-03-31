@@ -62,15 +62,15 @@ The *priority* indicates how important the *item* is.
 
 It MUST contain any number of exclamation marks (`!`) and dots (`.`).
 The dots MUST appear either before or after the exclamation mark(s),
-but they MUST NOT appear in between them.
+but not in between them.
 
-The number of exclamation marks is equivalent to the level of importance.
+The number of exclamation marks MUST be interpreted as equivalent to the level of importance.
 
-The dots are only for visual padding and don’t have any meaning on their own.
+The dots are only for visual padding and MUST NOT be attributed any meaning to.
 
 ### Description
 
-The *description* is user-provided text to describe the *item*.
+The *description* is user-provided text that gives meaning to the *item*.
 
 It MUST start on the same line that the *item* starts on.
 It MAY be continued on the subsequent line(s),
@@ -87,7 +87,7 @@ Potential additional *due dates* MUST be disregarded.
 
 ### Due Date
 
-A *due date* indicates how timely an *item* is.
+A *due date* determines how timely an *item* is.
 
 It MUST be commenced with the character sequence `-> `
 (a hypen, a greater-than sign, and a space),
@@ -101,12 +101,12 @@ The date pattern MUST be either of:
 - `yyyy-Www` or `yyyy/Www` to reference a week period
 - `yyyy-Qq` or `yyyy/Qq` to reference a quarter period
 
-`y` is a digit that denotes the year;
+`y` MUST be a digit that denotes the year;
 `m` the month;
 `d` the day;
 `w` the week number (according to ISO8601);
 `q` the quarter number.
-`W` and `Q` are literal qualifiers.
+`W` and `Q` MUST appear literally.
 
 The periodic patterns MUST be treated as equivalent
 to the last calendar day within the respective time frame.
