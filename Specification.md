@@ -37,7 +37,7 @@ which MUST appear in this order.
 *Checkbox*, *priority*, and *description* MUST be separated by one space character (` `) from each other.
 (Additional space characters MAY appear.)
 
-The *item* MUST not contain any blank lines.
+The *item* MUST NOT contain any blank lines.
 (I.e. lines that only consist of whitespace characters.)
 
 ### Checkbox
