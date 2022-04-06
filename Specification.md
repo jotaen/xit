@@ -38,7 +38,6 @@ which MUST appear in this order.
 (Additional space characters MAY appear.)
 
 The *item* MUST NOT contain any blank lines.
-(I.e. lines that only consist of whitespace characters.)
 
 ### Checkbox
 
@@ -99,7 +98,7 @@ The *description* MAY contain the following tokens:
 - One *due date*
 - Any number of *tags*
 
-These tokens MUST be surrounded by whitespace or punctuation,
+These tokens MUST be surrounded by blank characters or punctuation,
 except for such punctuation which the tokens themselves can consist of.
 
 Potential additional *due dates* MUST be disregarded.
@@ -198,7 +197,7 @@ that MAY be preceded by one *title*.
 ### Title
 
 The *title* is a single line of text
-that MUST NOT start with a whitespace character
+that MUST NOT start with a blank character
 or the opening square bracket character `[`.
 
 > #### Example
@@ -208,3 +207,14 @@ or the opening square bracket character `[`.
 > [ ] Item 1
 > [ ] Item 2
 > ```
+
+## Appendix
+
+### Glossary
+
+- Blank character: a character from the Unicode Space Separator category (Zs)
+- Blank line: a line that is either empty, or that exclusively consists of blank characters
+- Digit: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, or `9`
+- Letter: a character from the Unicode Letter category (L)
+- Newline: `\n` or `\r\n`
+- Punctuation: a character from the Unicode Punctuation category (P)
