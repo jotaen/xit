@@ -151,24 +151,24 @@ The *due date* value MUST be representable by the gregorian calendar.
 
 *Tags* are annotations for categorising or filtering the data.
 
-A *tag* MUST start with the hash character (`#`),
-followed by one or more characters for the *name* of the *tag*.
-There MAY follow an equals sign (`=`)
-along with one or more characters for the *value* of the *tag*.
+A *tag* MUST consist of a *tag name*,
+which MUST be preceded by a single `#` character.
+The *tag name* MAY be followed by a `=` character and a *tag value*.
 
-*Tag names* MUST be treated as case-insensitive.
+The *tag name* MUST only contain letters, digits, or the characters `_` or `-`.
+It MUST be interpreted as if it was all lower-case.
 
-The *tag value* MAY be surrounded by a pair of matching quote characters (either `"`, or `'`).
+The *tag value* MAY be surrounded by a pair of matching quotes,
+which MUST either be `"` (RECOMMENDED) or `'`.
+- If the *tag value* is quoted, it MAY contain any character
+  except for the respective quote character itself, or a newline.
+  In case no matching closing quote appears on the same line,
+  the *tag value* MUST be treated as absent.
+- If the *tag value* is not quoted, it MUST only contain
+  letters, digits, or the characters `_` or `-`.
 
-*Tag names* and unquoted *tag values* MUST only contain
-letters, digits, the underscore character (`_`),
-and/or the hyphen character (`-`).
-
-Quoted *tag values* MAY contain any character,
-except for the respective quote itself
-or a newline.
-If there is no closing quote on the same line,
-the *tag value* MUST be treated as absent.
+An empty *tag value* (e.g. `#tag=` or `#tag=""`)
+MUST be treated the same as an absent *tag value* (e.g. `#tag`).
 
 > #### Example
 >
