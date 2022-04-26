@@ -94,14 +94,8 @@ It MUST start on the same line that the *item* starts on.
 It MAY be continued on the subsequent line(s),
 where each of them MUST be indented (preceded) by a sequence of four space characters (`    `).
 
-The *description* MAY contain the following tokens:
-- One *due date*
-- Any number of *tags*
-
-These tokens MUST be surrounded by blank characters or punctuation,
-except for such punctuation which the tokens themselves can consist of.
-
-Potential additional *due dates* MUST be disregarded.
+The *description* MAY contain any number of *tags*, and/or one *due date*.
+(Any additional *due dates* MUST be disregarded.)
 
 > #### Example
 >
