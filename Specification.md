@@ -47,8 +47,8 @@ It MUST be a sequence of 3 characters,
 where the first character MUST be an opening square bracket (`[`),
 and the third character MUST be a closing square bracket (`]`).
 
-The second character determines the *status* of the *item*,
-and MUST be either of:
+The second character determines the *status* of the *item*.
+It MUST be either of:
 
 - ` ` (space) for *open*
 - `x` (the letter x) for *checked*
@@ -69,10 +69,10 @@ and MUST be either of:
 The *priority* indicates how important the *item* is.
 
 It MUST contain any number of exclamation marks (`!`) and dots (`.`).
-The dots MUST appear either before or after the exclamation mark(s),
-but not in between them.
+The dots MUST appear either before or after the exclamation mark(s).
+(So they can neither appear in between nor on both sides.)
 
-The number of exclamation marks MUST be interpreted as equivalent to the level of importance.
+The number of exclamation marks MUST be interpreted as equivalent to the level of importance of the *item*.
 
 The dots are only for visual padding and MUST NOT be attributed any meaning to.
 
@@ -150,7 +150,7 @@ which MUST be preceded by a single `#` character.
 The *tag name* MAY be followed by a `=` character and a *tag value*.
 
 The *tag name* MUST only contain letters, digits, or the characters `_` or `-`.
-It MUST be interpreted as if it was all lower-case.
+It MUST be treated as case-insensitive.
 
 The *tag value* MAY be surrounded by a pair of matching quotes,
 which MUST either be `"` (RECOMMENDED) or `'`.
@@ -160,6 +160,8 @@ which MUST either be `"` (RECOMMENDED) or `'`.
   the *tag value* MUST be treated as absent.
 - If the *tag value* is not quoted, it MUST only contain
   letters, digits, or the characters `_` or `-`.
+
+The *tag value* MUST be treated as case-sensitive.
 
 An empty *tag value* (e.g. `#tag=` or `#tag=""`)
 MUST be treated the same as an absent *tag value* (e.g. `#tag`).
