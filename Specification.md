@@ -1,6 +1,6 @@
 # [x]it! Specification
 
-> This specification document is currently a working draft (RFC).
+**Version 1**
 
 [x]it! is a plain-text file format for todos and check lists.
 
