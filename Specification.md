@@ -1,6 +1,6 @@
 # [x]it! Specification
 
-**Version 1**
+**Version 1.0**
 
 [x]it! is a plain-text file format for todos and check lists.
 
