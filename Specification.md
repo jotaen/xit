@@ -1,6 +1,6 @@
 # [x]it! Specification
 
-**Version 1.0**
+**Version 1.2**
 
 [x]it! is a plain-text file format for todos and check lists.
 
@@ -31,10 +31,10 @@ There SHOULD be a newline at the end of the file.
 An *item* is an entry in the file.
 
 It MUST start at the beginning of a line with a *checkbox*.
-There MAY follow a *priority* and/or a *description*,
+There MAY follow a *priority* and/or an *item description*,
 which MUST appear in this order.
 
-*Checkbox*, *priority*, and *description* MUST be separated by one space character (` `) from each other.
+*Checkbox*, *priority*, and *item description* MUST be separated by one space character (` `) from each other.
 (Additional space characters MAY appear.)
 
 The *item* MUST NOT contain any blank lines.
@@ -86,22 +86,22 @@ The dots are only for visual padding and MUST NOT be attributed any meaning to.
 > [ ] !!. This is more important
 > ```
 
-### Description
+### Item Description
 
-The *description* is user-provided text that gives meaning to the *item*.
+The *item description* is user-provided text that gives meaning to the *item*.
 
 It MUST start on the same line that the *item* starts on.
 It MAY be continued on the subsequent line(s),
 where each of them MUST be indented (preceded) by a sequence of four space characters (`    `).
 
-The *description* MAY contain any number of *tags*, and/or one *due date*.
+The *item description* MAY contain any number of *tags*, and/or one *due date*.
 (Any additional *due dates* MUST be disregarded.)
 
 > #### Example
 >
 > ```
-> [ ] This description is one line
-> [ ] This description continues ...
+> [ ] This item description is one line
+> [ ] This item description continues ...
 >     ... on the next line
 > ```
 
@@ -178,8 +178,9 @@ MUST be treated the same as an absent *tag value* (e.g. `#tag`).
 ### Group
 
 A *group* is any consecutive number of *items*
-(without blank line in between),
-that MAY be preceded by one *title*.
+(without blank line in between).
+It MAY be preceded by a *title*
+and a *group description*.
 
 > #### Example
 >
@@ -193,7 +194,8 @@ that MAY be preceded by one *title*.
 ### Title
 
 The *title* is a single line of text
-that MUST NOT start with a blank character
+that concisely summarises the group.
+It MUST NOT start with a blank character
 or the opening square bracket character `[`.
 
 > #### Example
@@ -203,6 +205,25 @@ or the opening square bracket character `[`.
 > [ ] Item 1
 > [ ] Item 2
 > ```
+
+### Group Description
+
+The *group description* is one or more lines of text
+that contains extra information about the group.
+It MAY follow after the *title*.
+Each of its lines MUST NOT start with a blank character
+or the opening square bracket character `[`.
+
+> #### Example
+> 
+> ```
+> Holiday check list
+> Take care of all these things before
+> leaving the house for more than 3 days.
+> [ ] Water all plants
+> [ ] Close windows
+> [ ] Activate alarm
+> ````
 
 ## Appendix
 
@@ -214,3 +235,9 @@ or the opening square bracket character `[`.
 - Letter: a character from the Unicode Letter category (L)
 - Newline: `\n` or `\r\n`
 - Punctuation: a character from the Unicode Punctuation category (P)
+
+### Changelog
+
+#### Version 1.2
+
+- Support descriptions for groups. Note, there are two kinds of descriptions now: an *item description* (formerly just “description”), and the new *group description*.
