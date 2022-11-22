@@ -1,6 +1,6 @@
 # [x]it! Specification
 
-**Version 1.0**
+**Version 1.1**
 
 [x]it! is a plain-text file format for todos and check lists.
 
@@ -54,6 +54,7 @@ It MUST be either of:
 - `x` (the letter x) for *checked*
 - `@` (at) for *ongoing*
 - `~` (tilde) for *obsolete*
+- `?` (question mark) for *in question*
 
 > #### Example
 >
@@ -62,6 +63,7 @@ It MUST be either of:
 > [x] This is a checked item
 > [@] This is an ongoing item
 > [~] This is an obsolete item
+> [?] This is an item in question
 > ```
 
 ### Priority
@@ -214,3 +216,9 @@ or the opening square bracket character `[`.
 - Letter: a character from the Unicode Letter category (L)
 - Newline: `\n` or `\r\n`
 - Punctuation: a character from the Unicode Punctuation category (P)
+
+### Changelog
+
+#### Version 1.1
+
+- Add new checkbox status “in question”: `[?]`
