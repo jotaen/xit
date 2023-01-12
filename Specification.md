@@ -54,6 +54,7 @@ It MUST be either of:
 - `x` (the letter x) for *checked*
 - `@` (at) for *ongoing*
 - `~` (tilde) for *obsolete*
+- `?` (question mark) for *in question*
 
 > #### Example
 >
@@ -62,6 +63,7 @@ It MUST be either of:
 > [x] This is a checked item
 > [@] This is an ongoing item
 > [~] This is an obsolete item
+> [?] This is an item in question
 > ```
 
 ### Priority
@@ -241,3 +243,7 @@ or the opening square bracket character `[`.
 #### Version 1.2
 
 - Support descriptions for groups. Note, there are two kinds of descriptions now: an *item description* (formerly just “description”), and the new *group description*.
+
+#### Version 1.1
+
+- Add new checkbox status “in question”: `[?]`
